@@ -1,10 +1,17 @@
-/* Theming */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
-
 :root {
   --white: #f9f9f9;
   --black: #36383f;
   --gray: #85888c;
+  --header: #000;
+  /*заголовки*/
+  --text: #324665;
+  /*тексты*/
+  --btn: #bc2525;
+  /*кнопки*/
+  --btn-text: #f1f5fa;
+  /*текст кнопок*/
+  --background: #f9f6f1;
+  /*фон блоков 2,3,5*/
 } /* variables*/
 
 /* Reset */
@@ -13,10 +20,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: var(--white);
-  font-family: "Poppins", sans-serif;
-}
+
 a {
   text-decoration: none;
 }
@@ -24,10 +28,13 @@ ul {
   list-style: none;
 }
 
+.header {
+  flex-basis: 3.18%;
+}
+
 /* Header */
 .header {
-  background-color: var(--black);
-  box-shadow: 1px 1px 5px 0px var(--gray);
+  background-color: #ffffff;
   position: sticky;
   top: 0;
   width: 100%;
@@ -35,9 +42,14 @@ ul {
 /* Logo */
 .logo {
   display: inline-block;
-  color: var(--white);
-  font-size: 60px;
-  margin-left: 10px;
+  width: 11rem;
+  color: #000;
+  font-size: 0.875rem;
+  /* margin-left: 10px; */
+
+  /* @media screen and (max-width: 769px) {
+    padding: 18px 0 16px;
+  } */
 }
 
 /* Nav menu */
@@ -45,16 +57,17 @@ ul {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: var(--black);
+  background-color: #fff;
   overflow: hidden;
 }
 .menu a {
   display: block;
   padding: 30px;
-  color: var(--white);
+  color: #000;
+  text-align: center;
 }
 .menu a:hover {
-  background-color: var(--gray);
+  color: #bc2525;
 }
 .nav {
   max-height: 0;
@@ -62,12 +75,17 @@ ul {
 }
 .hamb {
   cursor: pointer;
-  float: right;
-  padding: 40px 20px;
+  float: left;
+  padding: 23px;
+  /* padding: 40px 23px;
+  @media screen and (max-width: 769px) {
+    padding: 23px;
+  } */
 } /* Style label tag */
 
 .hamb-line {
-  background: var(--white);
+  background: #324665;
+  border-radius: 0.1875rem;
   display: block;
   height: 2px;
   position: relative;
@@ -76,10 +94,11 @@ ul {
 
 .hamb-line::before,
 .hamb-line::after {
-  background: var(--white);
+  background: #324665;
+  border-radius: 0.1875rem;
   content: "";
   display: block;
-  height: 100%;
+  height: 110%;
   position: absolute;
   transition: all 0.2s ease-out;
   width: 100%;
@@ -111,7 +130,7 @@ ul {
   top: 0;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .nav {
     max-height: none;
     top: 0;
@@ -124,10 +143,54 @@ ul {
   }
   .menu a:hover {
     background-color: transparent;
-    color: var(--gray);
+    color: #bc2525;
   }
 
   .hamb {
     display: none;
+    /* order: 1; */
   }
+
+  .logo {
+    /* order: 2; */
+  }
+
+  .header-btn {
+    /* order: 3; */
+  }
+}
+
+.nav {
+  @media screen and (max-width: 769px) {
+    top: 50px;
+  }
+
+  @media screen and (max-width: 320px) {
+    top: 70px;
+  }
+}
+/* button */
+.header-btn {
+  display: inline-block;
+  /* margin: 0 14px 0 12px; */
+}
+
+.button {
+  padding: 0.75rem 2.5rem;
+  border-radius: 1.5625rem;
+  background: var(--btn);
+  border: none;
+  backdrop-filter: blur(16px);
+  color: var(--btn-text);
+  font-size: 1.125rem;
+  font-style: normal;
+  line-height: normal;
+
+  @media screen and (max-width: 769px) {
+    padding: 0.63rem 1rem;
+  }
+}
+
+.button:hover {
+  background-color: #d72424;
 }
