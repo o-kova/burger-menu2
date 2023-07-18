@@ -23,7 +23,9 @@
 
 a {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent; /*убирает синий цвет при нажатии на ссылку*/
 }
+
 ul {
   list-style: none;
 }
@@ -38,6 +40,9 @@ ul {
   position: sticky;
   top: 0;
   width: 100%;
+  @media screen and (min-width: 361px) {
+    display: flex;
+  }
 }
 /* Logo */
 .logo {
@@ -50,6 +55,10 @@ ul {
   /* @media screen and (max-width: 769px) {
     padding: 18px 0 16px;
   } */
+}
+
+.logo:hover {
+  color: #bc2525;
 }
 
 /* Nav menu */
@@ -148,15 +157,21 @@ ul {
 
   .hamb {
     display: none;
-    /* order: 1; */
+    @media screen and (min-width: 361px) {
+      /* order: 1; */
+    }
   }
 
   .logo {
-    /* order: 2; */
+    @media screen and (min-width: 361px) {
+      /* order: 2; */
+    }
   }
 
   .header-btn {
-    /* order: 3; */
+    @media screen and (min-width: 361px) {
+      /* order: 3; */
+    }
   }
 }
 
