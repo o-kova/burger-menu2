@@ -10,28 +10,33 @@
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
   <body>
-    <!-- Navigation bar -->
     <header class="header">
-      <!-- Logo АНО «Объединение людей с сахарным диабетом РТ»-->
-      <a href="#" class="header__logo"
-        >АНО «Объединение людей с сахарным диабетом РТ»</a
-      >
-      <!-- Hamburger icon -->
-      <input class="header__side-menu" type="checkbox" id="side-menu" />
-      <label class="header__hamb" for="side-menu"
-        ><span class="header__hamb-line"></span
-      ></label>
-      <!-- Menu -->
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li><a href="#">Об АНО</a></li>
-          <li><a href="#">Проекты</a></li>
-          <li><a href="#">Команда</a></li>
-        </ul>
-      </nav>
-      <div class="header__btn button"><a href="#">Помочь</a></div>
+      <div class="header__container">
+        <!-- logo -->
+        <a href="#" class="header__logo"
+          ><img
+            src="./assets/images/logo2-mob.jpg"
+            class="header__img"
+            alt="ФБД"
+        /></a>
+        <!-- hamburger icon -->
+        <input class="header__side-menu" type="checkbox" id="side-menu" />
+        <label class="header__hamb" for="side-menu"
+          ><span class="header__hamb-line"></span
+        ></label>
+        <!-- menu -->
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li><a href="#" class="header__link">ДиабетФест</a></li>
+            <li><a href="#" class="header__link">Наши Достижения</a></li>
+            <li><a href="#" class="header__link">Партнеры</a></li>
+          </ul>
+        </nav>
+        <div class="header__btn button">
+          <a href="#" class="header__btn-link">Помочь</a>
+        </div>
+      </div>
     </header>
-    <!-- Main content -->
     <main>
       <article>
         <h1>Some content</h1>
