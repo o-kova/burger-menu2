@@ -32,16 +32,33 @@ ul {
   flex-basis: 3.18%;
 }
 
-/* Header */
 .header {
   background-color: #ffffff;
   position: sticky;
   top: 0;
   width: 100%;
 }
-/* Logo */
+
+.header__container {
+  @media screen and (max-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 3.5rem 1rem 3.5rem 0;
+  }
+
+  @media screen and (max-width: 769px) {
+    padding: 2rem 1rem 2rem 0;
+  }
+}
+
 .header__logo {
   /* display: inline-block; */
+  align-self: center;
+
+  @media screen and (max-width: 769px) {
+    order: 1;
+  }
 }
 
 .header__img {
@@ -52,23 +69,52 @@ ul {
   }
 }
 
-/* Nav menu */
 .header__nav {
   width: 100%;
   height: 100%;
   position: fixed;
   background-color: #fff;
   overflow: hidden;
+
+  @media screen and (max-width: 2000px) {
+    width: 48%;
+  }
+  @media screen and (max-width: 769px) {
+    margin-top: 4rem;
+  }
 }
-.header__list a {
+
+.header__list {
+  @media screen and (max-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  @media screen and (max-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40%;
+  }
+
+  @media screen and (max-width: 361px) {
+    padding-left: 30%;
+  }
+}
+
+.header__link {
   display: block;
   padding: 30px;
   color: #000;
   text-align: center;
+  width: 8rem;
 }
-.header__list a:hover {
+
+.header__link:hover {
   color: #bc2525;
 }
+
 .header__nav {
   max-height: 0;
   transition: max-height 0.5s ease-out;
@@ -138,9 +184,11 @@ ul {
     float: right;
     width: fit-content;
   }
+
   .header__list li {
     float: left;
   }
+
   .header__list a:hover {
     background-color: transparent;
     color: #bc2525;
@@ -151,7 +199,7 @@ ul {
   }
 }
 
-.header__nav {
+/* .header__nav {
   @media screen and (max-width: 769px) {
     top: 50px;
   }
@@ -159,11 +207,16 @@ ul {
   @media screen and (max-width: 320px) {
     top: 70px;
   }
-}
+} */
+
 /* button */
 .header__btn {
   display: inline-block;
   /* margin: 0 14px 0 12px; */
+
+  @media screen and (max-width: 769px) {
+    order: 2;
+  }
 }
 
 .button {
