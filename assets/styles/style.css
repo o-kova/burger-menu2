@@ -41,15 +41,15 @@ ul {
 }
 /* Logo */
 .header__logo {
-  display: inline-block;
-  width: 11rem;
-  color: #000;
-  font-size: 0.875rem;
-  /* margin-left: 10px; */
+  /* display: inline-block; */
+}
 
-  /* @media screen and (max-width: 769px) {
-    padding: 18px 0 16px;
-  } */
+.header__img {
+  width: 4rem;
+
+  @media screen and (max-width: 769px) {
+    width: 5rem;
+  }
 }
 
 /* Nav menu */
@@ -60,13 +60,13 @@ ul {
   background-color: #fff;
   overflow: hidden;
 }
-.header__menu a {
+.header__list a {
   display: block;
   padding: 30px;
   color: #000;
   text-align: center;
 }
-.header__menu a:hover {
+.header__list a:hover {
   color: #bc2525;
 }
 .header__nav {
@@ -138,10 +138,10 @@ ul {
     float: right;
     width: fit-content;
   }
-  .header__menu li {
+  .header__list li {
     float: left;
   }
-  .header__menu a:hover {
+  .header__list a:hover {
     background-color: transparent;
     color: #bc2525;
   }
