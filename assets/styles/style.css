@@ -46,6 +46,7 @@ ul {
   align-content: center;
   padding: 3.5rem 1rem 3.5rem 0;
   /* } */
+  align-items: center;
 
   @media screen and (max-width: 769px) {
     padding: 2rem 1rem 2rem 0;
@@ -208,13 +209,15 @@ ul {
 } */
 
 /* button */
-.header__btn {
-  display: inline-block;
-  /* margin: 0 14px 0 12px; */
-
+.header__btn-container {
   @media screen and (max-width: 769px) {
     order: 2;
   }
+}
+
+.header__btn {
+  display: inline-block;
+  /* margin: 0 14px 0 12px; */
 }
 
 .button {
