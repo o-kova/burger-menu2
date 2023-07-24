@@ -198,7 +198,7 @@ ul {
   }
 }
 
-/* .header__nav {
+.header__nav {
   @media screen and (max-width: 769px) {
     top: 50px;
   }
@@ -206,7 +206,7 @@ ul {
   @media screen and (max-width: 320px) {
     top: 70px;
   }
-} */
+}
 
 /* button */
 .header__btn-container {
