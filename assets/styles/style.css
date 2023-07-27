@@ -245,16 +245,6 @@ ul {
   }
 }
 
-@keyframes hideMenu {
-  from {
-    max-height: 100%;
-  }
-  to {
-    top: -20rem;
-    /* z-index: -1; */
-  }
-}
-
 .header__container {
   @media screen and (max-width: 769px) {
     .header__nav:hover {
