@@ -37,6 +37,7 @@ ul {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 5;
 }
 
 .header__container {
@@ -118,6 +119,7 @@ ul {
   max-height: 0;
   transition: max-height 0.5s ease-out;
 }
+
 .header__hamb {
   cursor: pointer;
   float: left;
@@ -188,22 +190,82 @@ ul {
 
 @keyframes hideMenu {
   from {
+    max-height: 100%;
+  }
+  to {
+    top: -20rem;
+    /* z-index: -1; */
+  }
+}
+
+@keyframes mid-line {
+  from {
+    background: transparent;
+  }
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes before-line {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(0deg);
+    top: 5px;
+  }
+}
+
+@keyframes after-line {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(0deg);
+    top: -5px;
+  }
+}
+
+@keyframes hide {
+  0% {
     opacity: 1;
     visibility: visible;
   }
-  to {
+  50% {
+    top: -20rem;
+  }
+  70% {
     opacity: 0;
     visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes hideMenu {
+  from {
+    max-height: 100%;
+  }
+  to {
+    top: -20rem;
+    /* z-index: -1; */
   }
 }
 
 .header__container {
   @media screen and (max-width: 769px) {
     .header__nav:hover {
-      animation: fade 3s ease forwards;
+      animation: hide 1s ease forwards;
     }
-  }
-  .header__side-menu {
+    /* .header__hamb-line::before {
+      animation: before-line 0.5s ease forwards;
+    }
+    .header__hamb-line::after {
+      animation: after-line 0.5s ease forwards;
+    } */
   }
 }
 
