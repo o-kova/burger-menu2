@@ -28,9 +28,9 @@ ul {
   list-style: none;
 }
 
-.header {
+/* .header {
   flex-basis: 3.18%;
-}
+} */
 
 .header {
   background-color: #ffffff;
@@ -173,6 +173,38 @@ ul {
 .header__side-menu:checked ~ .header__hamb .header__hamb-line::after {
   transform: rotate(45deg);
   top: 0;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes hideMenu {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.header__container {
+  @media screen and (max-width: 769px) {
+    .header__nav:hover {
+      animation: fade 3s ease forwards;
+    }
+  }
+  .header__side-menu {
+  }
 }
 
 @media screen and (min-width: 769px) {
