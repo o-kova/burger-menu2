@@ -248,7 +248,12 @@ ul {
     .header__nav:hover {
       animation: hide 1s ease forwards;
     }
-    .header__hamb-line::before {
+
+    /* .header__hamb:disabled {
+      animation: hide 1s ease forwards;
+    } */
+
+    /* .header__hamb-line::before {
       animation: before-line 0.5s ease forwards;
     }
     .header__hamb-line {
@@ -256,7 +261,19 @@ ul {
     }
     .header__hamb-line::after {
       animation: after-line 0.5s ease forwards;
-    }
+    } */
+
+    /* .header__hamb:checked {
+      .header__hamb-line::before {
+        animation: before-line 0.5s ease forwards;
+      }
+      .header__hamb-line {
+        animation: mid-line 0.5s ease forwards;
+      }
+      .header__hamb-line::after {
+        animation: after-line 0.5s ease forwards;
+      }
+    } */
 
     /* .header__hamb-line::before:focus-within {
       transform: scale(1.3);
