@@ -198,15 +198,6 @@ ul {
   }
 }
 
-@keyframes mid-line {
-  from {
-    background: transparent;
-  }
-  to {
-    background: transparent;
-  }
-}
-
 @keyframes before-line {
   from {
     transform: rotate(-45deg);
@@ -216,7 +207,14 @@ ul {
     top: 5px;
   }
 }
-
+@keyframes mid-line {
+  from {
+    background: transparent;
+  }
+  to {
+    background-color: #324665;
+  }
+}
 @keyframes after-line {
   from {
     transform: rotate(45deg);
@@ -250,12 +248,15 @@ ul {
     .header__nav:hover {
       animation: hide 1s ease forwards;
     }
-    /* .header__hamb-line::before:focus-within {
+    .header__hamb-line::before {
       animation: before-line 0.5s ease forwards;
     }
-    .header__hamb-line::after:focus-within {
+    .header__hamb-line {
+      animation: mid-line 0.5s ease forwards;
+    }
+    .header__hamb-line::after {
       animation: after-line 0.5s ease forwards;
-    } */
+    }
 
     /* .header__hamb-line::before:focus-within {
       transform: scale(1.3);
